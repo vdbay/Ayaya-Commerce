@@ -10,7 +10,11 @@
     pkgs.unzip
   ];
   # Sets environment variables in the workspace
-  env = {};
+  env = {
+    SBENVURL = "https://cvgsjljdvaqvdesokygx.supabase.co";
+    SBENVPUBKEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ4NTM3MjUsImV4cCI6MjA0MDQyOTcyNX0.cOG1Kg2H038nLoCCFSeEltaS-dq1icN5DBAHGXT4mCY";
+    SBENVSUKEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNDg1MzcyNSwiZXhwIjoyMDQwNDI5NzI1fQ.EFnVpz4_nKqNxJlntIuKzE3JErh8ASbfEIpc66aKY2g";
+  };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
@@ -52,11 +56,11 @@
       enable = true;
       previews = {
         web = {
-          command = ["flutter" "run" "--machine" "-d" "web-server" "--web-hostname" "0.0.0.0" "--web-port" "$PORT"];
+          command = ["flutter" "run" "--machine" "-d" "web-server" "--web-hostname" "0.0.0.0" "--web-port" "$PORT" "--dart-define=SBENVURL=https://cvgsjljdvaqvdesokygx.supabase.co" "--dart-define=SBENVPUBKEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ4NTM3MjUsImV4cCI6MjA0MDQyOTcyNX0.cOG1Kg2H038nLoCCFSeEltaS-dq1icN5DBAHGXT4mCY" "--dart-define=SBENVSUKEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNDg1MzcyNSwiZXhwIjoyMDQwNDI5NzI1fQ.EFnVpz4_nKqNxJlntIuKzE3JErh8ASbfEIpc66aKY2g"];
           manager = "flutter";
         };
         android = {
-          command = ["flutter" "run" "--machine" "-d" "android" "-d" "localhost:5555"];
+          command = ["flutter" "run" "--machine" "-d" "android" "-d" "localhost:5555" "--dart-define=SBENVURL=https://cvgsjljdvaqvdesokygx.supabase.co" "--dart-define=SBENVPUBKEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ4NTM3MjUsImV4cCI6MjA0MDQyOTcyNX0.cOG1Kg2H038nLoCCFSeEltaS-dq1icN5DBAHGXT4mCY" "--dart-define=SBENVSUKEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNDg1MzcyNSwiZXhwIjoyMDQwNDI5NzI1fQ.EFnVpz4_nKqNxJlntIuKzE3JErh8ASbfEIpc66aKY2g"];
           manager = "flutter";
         };
       };

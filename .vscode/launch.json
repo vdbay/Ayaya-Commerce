@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Ayaya-Commerce",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=SBENVURL=https://cvgsjljdvaqvdesokygx.supabase.co",
+                "--dart-define=SBENVPUBKEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ4NTM3MjUsImV4cCI6MjA0MDQyOTcyNX0.cOG1Kg2H038nLoCCFSeEltaS-dq1icN5DBAHGXT4mCY",
+                "--dart-define=SBENVSUKEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNDg1MzcyNSwiZXhwIjoyMDQwNDI5NzI1fQ.EFnVpz4_nKqNxJlntIuKzE3JErh8ASbfEIpc66aKY2g",
+            ]
+        }
+    ]
+}
