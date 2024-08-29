@@ -7,11 +7,13 @@ class TestsupabaseService extends GetxController {
   // Get a reference your Supabase client
   final supabase = Supabase.instance.client;
 
-  Future<TestModel> fetchUsers() async {
+  Future<TestModel> fetchOneTest() async {
     final response = await supabase.from('test').select().limit(1).single();
-    print(response);
-    print(response.toString());
-    print(jsonDecode(response.toString()));
     return TestModel.fromJson(response);
+  }
+
+  Future<List<TestModel>> fetchAllTest() async {
+    final response = await supabase.from('test').select();
+    return (response as List).map((data) => TestModel.fromJson(data)).toList();
   }
 }

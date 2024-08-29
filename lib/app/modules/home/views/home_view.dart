@@ -17,7 +17,17 @@ class HomeView extends GetView<HomeController> {
           child: TextButton(
         onPressed: () async {
           try {
-            print(await controller.getTestTable());
+            final oneResult = await controller.getOneTest();
+            print("age: ${oneResult.age}");
+            print("id: ${oneResult.id}");
+            print("name: ${oneResult.name}");
+
+            final allResult = await controller.getAllTest();
+            for (var result in allResult) {
+              print("age: ${result.age}");
+              print("id: ${result.id}");
+              print("name: ${result.name}");
+            }
           } catch (e) {
             print(e.toString());
           }
