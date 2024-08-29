@@ -1,10 +1,10 @@
 class TestModel {
   int? id;
+  String? createdAt;
   String? name;
   int? age;
-  DateTime createdAt = DateTime.now();
 
-  TestModel({this.id, this.name, this.age, required this.createdAt});
+  TestModel({this.id, this.createdAt, this.name, this.age});
 
   TestModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -14,11 +14,11 @@ class TestModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['created_at'] = createdAt;
-    data['name'] = name;
-    data['age'] = age;
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['created_at'] = this.createdAt;
+    data['name'] = this.name;
+    data['age'] = this.age;
     return data;
   }
 }

@@ -3,14 +3,10 @@ import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'app/routes/app_pages.dart';
 
-const supabaseUrl = 'https://cvgsjljdvaqvdesokygx.supabase.co';
-const supabaseKey = String.fromEnvironment(
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ4NTM3MjUsImV4cCI6MjA0MDQyOTcyNX0.cOG1Kg2H038nLoCCFSeEltaS-dq1icN5DBAHGXT4mCY');
-
 Future<void> main() async {
   await Supabase.initialize(
-    url: supabaseUrl,
-    anonKey: supabaseKey,
+    url: 'https://cvgsjljdvaqvdesokygx.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2Z3NqbGpkdmFxdmRlc29reWd4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNDg1MzcyNSwiZXhwIjoyMDQwNDI5NzI1fQ.EFnVpz4_nKqNxJlntIuKzE3JErh8ASbfEIpc66aKY2g',
   );
   runApp(const MyApp());
 }

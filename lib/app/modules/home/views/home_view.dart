@@ -13,12 +13,17 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: Center(
+          child: TextButton(
+        onPressed: () async {
+          try {
+            print(await controller.getTestTable());
+          } catch (e) {
+            print(e.toString());
+          }
+        },
+        child: const Text('Click to fetch'),
+      )),
     );
   }
 }
