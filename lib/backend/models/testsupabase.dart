@@ -14,11 +14,11 @@ class TestModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['created_at'] = this.createdAt;
-    data['name'] = this.name;
-    data['age'] = this.age;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['created_at'] = createdAt;
+    data['name'] = name;
+    data['age'] = age;
     return data;
   }
 }
