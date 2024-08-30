@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -18,18 +20,18 @@ class HomeView extends GetView<HomeController> {
         onPressed: () async {
           try {
             final oneResult = await controller.getOneTest();
-            print("age: ${oneResult.age}");
-            print("id: ${oneResult.id}");
-            print("name: ${oneResult.name}");
+            log("age: ${oneResult.age}");
+            log("id: ${oneResult.id}");
+            log("name: ${oneResult.name}");
 
             final allResult = await controller.getAllTest();
             for (var result in allResult) {
-              print("age: ${result.age}");
-              print("id: ${result.id}");
-              print("name: ${result.name}");
+              log("age: ${result.age}");
+              log("id: ${result.id}");
+              log("name: ${result.name}");
             }
           } catch (e) {
-            print(e.toString());
+            log(e.toString());
           }
         },
         child: const Text('Click to fetch'),
